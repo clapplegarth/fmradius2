@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>fmradius</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="img/icon.png">
+  <link rel="icon" type="image/x-icon" href="img/icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/main.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  <link rel="stylesheet" href="css/main.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="theme-color" content="#f2fcf4">
+</head>
+<body>
+
+<div id="wrapper">
+  <div id="alerts">
+  </div>
+  <div id="search" class="card">
+    <h3>fmradi.us</h3>
+    <form id="searchForm" action="get/search.php" method="GET"> 
+      <div class="form-group">
+        <input type="search" class="form-control" id="q" name="q" placeholder='try "96.7 FM" or "WRNR" or "PR" (Puerto Rico)'>
+      </div>
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="bounds" id="boundsRadio1" value="none">
+        <label class="form-check-label" for="boundsRadio1">Anywhere</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="bounds" id="boundsRadio2" value="prefer" checked>
+        <label class="form-check-label" for="boundsRadio2">Prefer in view</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="bounds" id="boundsRadio3" value="only">
+        <label class="form-check-label" for="boundsRadio3">Only in view</label>
+      </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="fmonly" id="fmonlyCheckbox" value="only" checked>
+          <label class="form-check-label" for="fmonlyCheckbox">Only standard FM service <a>(?)</a></label>
+        </div>
+      </div>
+      <input type="hidden" name="minLat" id="minLat">
+      <input type="hidden" name="maxLat" id="maxLat">
+      <input type="hidden" name="minLon" id="minLon">
+      <input type="hidden" name="maxLon" id="maxLon">
+    </form>
+  </div>
+  <div id="sidebar">
+  </div>
+  <div id="map">
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+# disable all Web access as these files are for database setup scripts only
+Deny from all
