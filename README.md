@@ -3,17 +3,16 @@ A simple PHP-based Web service to map and search for United States FM radio stat
 
 ## Requirements
 * A Web host that can serve files and invoke PHP to process .php files
-* PHP must have the PDO module available
+* PHP must have the PDO module available (this is generally the case for most environments)
 * Optional: Access to a [PDO-compatible database](https://www.php.net/manual/en/pdo.drivers.php) (SQLite is also an option)
 
 ## Setup Instructions
-1. Download the repo and navigate to the `dist` folder.  This is the "public" (Web-accessible) folder.
+1. Copy the `dist` folder to your PHP-enabled Web host, in the "public" location (for example, `/var/www/html`).
 2. Retrieve a FCC **FM Query** in *"Text file (pipe delimited, no links)"* format from: https://www.fcc.gov/media/radio/fm-query and save the resulting file in `scripts/fccdata`.  (You do not need to select any special options on this page.)
 3. Retrieve **FM Service Contours** data from the FCC here: https://transition.fcc.gov/Bureaus/MB/Databases/fm_service_contour_data/ and extract the archive to `scripts/fccdata` as well.  This text file is approximately 200 MB.
 4. Edit `scripts/config.php` to set up your database information.  You can use any [PDO-compatible database](https://www.php.net/manual/en/pdo.drivers.php), including SQLite if you don't wish to set up a permanent database.
-5. Copy the `dist` folder to your PHP-enabled Web host, in the "public" location (for example, `/var/www/html`).
-6. In your browser, navigate to *.../scripts/loaddb.php* (for example, https://localhost:8080/scripts/loaddb.php - or replace localhost:8080 with your domain name).  This will load the tables.
-7. Test the site by navigating to the site root.
+5. In your browser, navigate to *.../scripts/loaddb.php* (for example, https://localhost:8080/scripts/loaddb.php - or replace localhost:8080 with your domain name).  This will load the tables.
+6. Test the site by navigating to the site root.
 
 ## Using the Site
 The search box can be used to search for:
