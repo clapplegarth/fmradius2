@@ -1,5 +1,7 @@
 # fmradius2
-A simple PHP-based Web service to map and search for United States FM radio stations.  A live demo is available at https://fmradi.us.
+A simple PHP-based Web service to map and search for United States FM radio stations.
+
+A live demo is available at https://fmradi.us.
 
 ## Requirements
 * A Web host that can serve files and invoke PHP to process .php files
